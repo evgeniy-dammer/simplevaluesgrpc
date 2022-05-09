@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "github.com/evgeniy-dammer/simplevaluesgrpc/src/addservice";
+
+package addservice;
+
+service AddService {
+    rpc Add (AddRequest) returns (AddResponse);
+}
+
+message AddRequest {
+    double a = 1;
+    double b = 2;
+}
+
+message AddResponse {
+    double result = 1;
+}
